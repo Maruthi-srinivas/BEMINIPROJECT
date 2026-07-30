@@ -26,22 +26,24 @@ export function ServiceShell({ service, children }: Props) {
   }, [service.baseUrl]);
 
   return (
-    <div className="app-shell">
+    <div className={`app-shell realm-stage ${service.theme}`} data-game={service.game}>
       <div className="shell-header">
         <div>
           <Link className="back-link" to="/">
-            ← All services
+            ← Exit realm
           </Link>
+          <div className="realm-chip">{service.realm}</div>
           <h1>
             {service.index}. {service.name}
           </h1>
-          <p>{service.blurb}</p>
+          <p>{service.tagline}</p>
+          <p className="muted">{service.blurb}</p>
           <p className="muted">
-            Base URL: <code>{service.baseUrl}</code>
+            Uplink: <code>{service.baseUrl}</code>
           </p>
         </div>
         <div className={`badge ${online ? "online" : online === false ? "offline" : ""}`}>
-          {online === null ? "Checking…" : online ? "Online" : "Offline — start the service"}
+          {online === null ? "SCANNING…" : online ? "SIGNAL LOCKED" : "SIGNAL LOST"}
         </div>
       </div>
       {children}
