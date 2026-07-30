@@ -1,0 +1,59 @@
+name: Test services 01-10
+
+on:
+  push:
+    paths:
+      - "01-url-shortener/**"
+      - "02-auth-service/**"
+      - "03-rate-limiter/**"
+      - "04-file-storage/**"
+      - "05-notification-service/**"
+      - "06-job-queue/**"
+      - "07-api-gateway/**"
+      - "08-log-aggregator/**"
+      - "09-feature-flags/**"
+      - "10-mini-redis/**"
+      - "shared/**"
+      - ".github/workflows/test-services.yml"
+  pull_request:
+    paths:
+      - "01-url-shortener/**"
+      - "02-auth-service/**"
+      - "03-rate-limiter/**"
+      - "04-file-storage/**"
+      - "05-notification-service/**"
+      - "06-job-queue/**"
+      - "07-api-gateway/**"
+      - "08-log-aggregator/**"
+      - "09-feature-flags/**"
+      - "10-mini-redis/**"
+      - "shared/**"
+      - ".github/workflows/test-services.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        service:
+          - 01-url-shortener
+          - 02-auth-service
+          - 03-rate-limiter
+          - 04-file-storage
+          - 05-notification-service
+          - 06-job-queue
+          - 07-api-gateway
+          - 08-log-aggregator
+          - 09-feature-flags
+          - 10-mini-redis
+    defaults:
+      run:
+        working-directory: ${{ matrix.service }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: pytest -q

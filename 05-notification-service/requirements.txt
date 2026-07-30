@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg[binary]
+aio-pika
+aiosmtplib
+httpx
+pydantic-settings
+email-validator
+pytest

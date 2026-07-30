@@ -1,0 +1,27 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8009:8000"
+    environment:
+      DATABASE_URL: postgresql+psycopg://flags:flags@postgres:5432/flags
+      REDIS_URL: redis://redis:6379/0
+      CACHE_TTL_SECONDS: "60"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: flags
+      POSTGRES_USER: flags
+      POSTGRES_PASSWORD: flags
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U flags -d flags"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+  redis:
+    image: redis:7-alpine

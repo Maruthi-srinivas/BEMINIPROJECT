@@ -1,0 +1,29 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8004:8000"
+    environment:
+      DATABASE_URL: postgresql+psycopg://filestorage:filestorage@postgres:5432/filestorage
+      STORAGE_ROOT: /data/objects
+      SIGNING_SECRET: local-development-signing-secret
+      BASE_URL: http://localhost:8004
+    volumes:
+      - objects:/data/objects
+    depends_on:
+      postgres:
+        condition: service_healthy
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: filestorage
+      POSTGRES_USER: filestorage
+      POSTGRES_PASSWORD: filestorage
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U filestorage -d filestorage"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  objects:
