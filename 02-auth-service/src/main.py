@@ -11,6 +11,7 @@ from urllib.parse import urlencode
 
 import httpx
 import jwt
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi import Depends, FastAPI, HTTPException, Request, status
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from pydantic import BaseModel, EmailStr, Field
@@ -150,6 +151,15 @@ async def lifespan(_: FastAPI):
 
 
 app = FastAPI(title="Authentication Service", version="1.0.0", lifespan=lifespan)
+
+_cors_origins = [o.strip() for o in os.getenv("CORS_ORIGINS", "http://localhost:5173").split(",") if o.strip()]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=_cors_origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/health")

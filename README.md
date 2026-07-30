@@ -14,6 +14,21 @@ Docker Compose stack:
 9. `09-feature-flags` — percentage rollouts and attribute targeting
 10. `10-mini-redis` — in-memory KV, TTL, and WebSocket pub/sub
 
+## Frontend console
+
+A Vite + React UI lives in [`frontend/`](frontend/) and calls each service on
+ports `8001`–`8010`:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+See [`frontend/README.md`](frontend/README.md) for details.
+
+## Backends
+
 Run a service from its directory:
 
 ```bash
