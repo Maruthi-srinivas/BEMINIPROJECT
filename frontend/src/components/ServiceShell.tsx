@@ -27,25 +27,28 @@ export function ServiceShell({ service, children }: Props) {
 
   return (
     <div className={`app-shell realm-stage ${service.theme}`} data-game={service.game}>
-      <div className="shell-header">
-        <div>
-          <Link className="back-link" to="/">
-            ← Exit realm
-          </Link>
-          <div className="realm-chip">{service.realm}</div>
-          <h1>
-            {service.index}. {service.name}
-          </h1>
-          <p>{service.tagline}</p>
-          <p className="muted">{service.blurb}</p>
-          <p className="muted">
-            Uplink: <code>{service.baseUrl}</code>
-          </p>
+      <header className="glass-card shell-header-card">
+        <div className="shell-header">
+          <div>
+            <Link className="back-link" to="/">
+              ← Exit realm
+            </Link>
+            <div className="realm-chip">{service.realm}</div>
+            <h1>
+              {service.index}. {service.name}
+            </h1>
+            <p>{service.tagline}</p>
+            <p className="muted">{service.blurb}</p>
+            <p className="muted">
+              Uplink: <code>{service.baseUrl}</code>
+            </p>
+          </div>
+          <div className={`badge ${online ? "online" : online === false ? "offline" : ""}`}>
+            <span className="badge-dot" />
+            {online === null ? "SCANNING…" : online ? "SIGNAL LOCKED" : "SIGNAL LOST"}
+          </div>
         </div>
-        <div className={`badge ${online ? "online" : online === false ? "offline" : ""}`}>
-          {online === null ? "SCANNING…" : online ? "SIGNAL LOCKED" : "SIGNAL LOST"}
-        </div>
-      </div>
+      </header>
       {children}
     </div>
   );
