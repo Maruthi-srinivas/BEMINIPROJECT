@@ -1,0 +1,57 @@
+Project title (pick one)
+BE Mini Lab — Multi-Service Backend Systems Lab
+or Backend Systems Portfolio — 10 FastAPI Microservices
+
+One-liner
+Built 10 independently deployable FastAPI services covering auth, caching, rate limiting, messaging, job processing, API gatewaying, logging, and feature flags — each with Docker Compose, PostgreSQL/Redis where needed, pytest, and GitHub Actions CI.
+
+Resume bullets (use 4–6)
+Designed and implemented 10 production-style FastAPI services (Python 3.12) with OpenAPI docs, health checks, and Docker Compose stacks using PostgreSQL, Redis, RabbitMQ, and OpenSearch.
+Built an auth service with Argon2 password hashing, JWT access tokens, rotating/revocable refresh tokens (hashed at rest), RBAC, and Google OIDC login.
+Implemented Redis rate limiting with Lua token-bucket and sliding-window (ZSET) algorithms, plus an API gateway with JWT verification, prefix-based reverse proxying, and local rate limiting.
+Built a notification pipeline on RabbitMQ with durable queues, retry/backoff, and a dead-letter queue, plus a Redis job queue with workers and interval-based schedulers.
+Developed a mini object store with filesystem + DB metadata, HMAC-SHA256 signed URLs, and path-traversal safeguards; added a URL shortener with Redis read-through caching and click analytics.
+Created a feature-flag service with percentage rollouts (sticky hashing) and attribute rules, an OpenSearch log aggregator with source-token auth, and an in-memory KV store with TTL + WebSocket pub/sub.
+Wrote pytest + httpx API tests for all services and automated them in GitHub Actions (matrix CI per service).
+Skills line (for resume)
+Python · FastAPI · PostgreSQL · Redis · RabbitMQ · OpenSearch · JWT/OAuth · Docker · pytest · GitHub Actions
+
+Interview talking points (short)
+Topic	What to say
+Architecture
+Independent labs, not a mesh — each owns DB/config/deploy; gateway is self-contained (no cross-service calls)
+Auth
+Short-lived JWT + rotating refresh; refresh tokens stored hashed; role-gated admin routes
+Rate limits
+Token bucket vs sliding window tradeoffs; why Lua/Redis for atomicity
+Messaging
+Why DLQ + retries; at-least-once delivery implications
+Storage
+Signed URLs for temporary access without exposing the object store
+Flags
+Sticky % rollout via hash so users don’t flip mid-session
+If you want, I can also format this as a LinkedIn project blurb or a STAR story for “tell me about a backend project.”
+
+give me the star story
+
+STAR story — Backend Systems Lab
+Situation
+I wanted interview-ready depth beyond CRUD APIs, so I built a portfolio of backend systems that mirror what production teams actually run — auth, rate limiting, queues, gateways, caching, and observability — instead of one simple app.
+
+Task
+Design and ship 10 independently deployable FastAPI services, each with its own data store, Docker Compose stack, tests, and clear operational concerns (security, durability, performance), so I could speak confidently about tradeoffs in backend interviews.
+
+Action
+
+Split work into focused services (auth, URL shortener, rate limiter, file storage, notifications, job queue, API gateway, log aggregator, feature flags, mini Redis).
+Implemented JWT + rotating refresh tokens, Argon2 hashing, RBAC, and Google OIDC on the auth service.
+Built Redis rate limiting with Lua token-bucket and sliding-window algorithms for atomic checks under concurrency.
+Used RabbitMQ for notifications with retries, backoff, and a DLQ; used Redis for a job queue with workers and scheduled jobs.
+Added an API gateway with JWT verification, reverse proxy routing, and local rate limiting.
+Built signed-URL file access (HMAC), Redis-backed caching, OpenSearch log ingest, and sticky % feature-flag rollouts.
+Containerized each service with Compose (Postgres/Redis/RabbitMQ/OpenSearch as needed) and added pytest + GitHub Actions CI.
+Result
+Delivered a working multi-service backend portfolio I can demo end-to-end, with concrete talking points on auth security, rate-limit algorithms, messaging reliability, and caching. It became my strongest interview project for backend roles because I can walk through real failure modes (token reuse, queue poison messages, cache inconsistency) with code I own.
+
+60-second spoken version
+“I built ten FastAPI backend labs instead of one demo app — auth with JWT and rotating refresh tokens, Redis rate limiting with token-bucket and sliding window, RabbitMQ notifications with a DLQ, a Redis job queue, and an API gateway. Each service has Docker Compose, its own store, and pytest in CI. The point was to practice production concerns — concurrency, retries, security, and observability — so in interviews I can discuss tradeoffs with systems I’ve actually implemented.”
