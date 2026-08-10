@@ -1,6 +1,6 @@
 import { useEffect, useState, type ReactNode } from "react";
-import { Link } from "react-router-dom";
 import { checkHealth } from "../api/http";
+import { getHighlightForService } from "../config/portfolio";
 import type { ServiceMeta } from "../config/services";
 
 type Props = {
@@ -10,6 +10,7 @@ type Props = {
 
 export function ServiceShell({ service, children }: Props) {
   const [online, setOnline] = useState<boolean | null>(null);
+  const highlight = getHighlightForService(service.slug);
 
   useEffect(() => {
     let active = true;
@@ -30,10 +31,11 @@ export function ServiceShell({ service, children }: Props) {
       <header className="glass-card shell-header-card">
         <div className="shell-header">
           <div>
-            <Link className="back-link" to="/">
-              ← Exit realm
-            </Link>
-            <div className="realm-chip">{service.realm}</div>
+            <div className="realm-breadcrumb">
+              <span className="realm-chip">{service.realm}</span>
+              <span className="realm-breadcrumb-sep">/</span>
+              <span className="realm-game-chip">{service.game}</span>
+            </div>
             <h1>
               {service.index}. {service.name}
             </h1>
@@ -48,6 +50,13 @@ export function ServiceShell({ service, children }: Props) {
             {online === null ? "SCANNING…" : online ? "SIGNAL LOCKED" : "SIGNAL LOST"}
           </div>
         </div>
+        {highlight && (
+          <aside className="resume-callout">
+            <div className="resume-callout-label">Resume highlight</div>
+            <strong>{highlight.title}</strong>
+            <p>{highlight.talkingPoint ?? highlight.body}</p>
+          </aside>
+        )}
       </header>
       {children}
     </div>

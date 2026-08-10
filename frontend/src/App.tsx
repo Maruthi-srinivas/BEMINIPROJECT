@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+import { SiteLayout } from "./components/layout/SiteLayout";
 import { HomePage } from "./pages/HomePage";
 import { UrlShortenerPage } from "./pages/services/UrlShortenerPage";
 import { AuthPage } from "./pages/services/AuthPage";
@@ -13,14 +14,8 @@ import { MiniRedisPage } from "./pages/services/MiniRedisPage";
 
 export default function App() {
   return (
-    <div className="app-root">
-      <div className="ambient-bg" aria-hidden="true">
-        <div className="orb orb-1" />
-        <div className="orb orb-2" />
-        <div className="orb orb-3" />
-        <div className="noise-overlay" />
-      </div>
-      <Routes>
+    <Routes>
+      <Route element={<SiteLayout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/services/url-shortener" element={<UrlShortenerPage />} />
         <Route path="/services/auth-service" element={<AuthPage />} />
@@ -33,7 +28,7 @@ export default function App() {
         <Route path="/services/feature-flags" element={<FeatureFlagsPage />} />
         <Route path="/services/mini-redis" element={<MiniRedisPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-    </div>
+      </Route>
+    </Routes>
   );
 }

@@ -1,49 +1,66 @@
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { ArchitectureMap } from "../components/portfolio/ArchitectureMap";
+import { HighlightCards } from "../components/portfolio/HighlightCards";
+import { MetricsBar } from "../components/portfolio/MetricsBar";
+import { NarrativeSection } from "../components/portfolio/NarrativeSection";
+import { SectionHeader } from "../components/portfolio/SectionHeader";
+import { SkillsGrid } from "../components/portfolio/SkillsGrid";
+import { portfolio } from "../config/portfolio";
 import { services } from "../config/services";
 
 export function HomePage() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!location.hash) return;
+    const id = location.hash.slice(1);
+    const el = document.getElementById(id);
+    if (el) {
+      requestAnimationFrame(() => {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+  }, [location.hash]);
+
   return (
-    <div className="app-shell">
-      <section className="hero">
-        <div className="glass-card hero-card">
-          <div className="brand brand-mark">BE Mini Lab // Neon Realms</div>
-          <h1>
-            Jack into <span className="gradient-text">ten</span> backend worlds
-          </h1>
-          <p>
-            A cyberpunk ops deck where every microservice is a playable open-world
-            RPG realm — neon corridors, vault terminals, and mass relays waiting
-            for your next command.
-          </p>
-          <div className="hero-stats">
-            <div className="stat-pill">
-              <span className="stat-value">{services.length}</span>
-              <span className="stat-label">Realms</span>
-            </div>
-            <div className="stat-pill">
-              <span className="stat-value">FastAPI</span>
-              <span className="stat-label">Stack</span>
-            </div>
-            <div className="stat-pill">
-              <span className="stat-value">Live</span>
-              <span className="stat-label">Uplink</span>
-            </div>
+    <div className="app-shell portfolio-shell">
+      <section id="hero" className="hero">
+        <div className="glass-card hero-card hud-frame">
+          <div className="brand brand-mark">
+            {portfolio.brand} // Neon Realms
           </div>
-          <a className="cta" href="#services">
-            <span className="cta-glow" />
-            Enter the grid →
-          </a>
+          <h1>
+            Ten backend systems.{" "}
+            <span className="gradient-text">One neon</span> command deck.
+          </h1>
+          <p>{portfolio.heroSub}</p>
+          <p className="hero-oneliner muted">{portfolio.oneLiner}</p>
+          <MetricsBar />
+          <div className="hero-ctas">
+            <a className="cta" href="#architecture">
+              <span className="cta-glow" />
+              Explore architecture →
+            </a>
+            <a className="cta cta-secondary" href="#services">
+              <span className="cta-glow" />
+              Launch demos →
+            </a>
+          </div>
         </div>
       </section>
 
-      <section id="services" className="glass-section">
-        <div className="section-header">
-          <h2 className="section-title">Realm Directory</h2>
-          <p className="section-sub">
-            Each console channels a legendary open-world RPG vibe while talking to
-            the live FastAPI service on its port.
-          </p>
-        </div>
+      <NarrativeSection />
+      <ArchitectureMap />
+      <SkillsGrid />
+      <HighlightCards />
+
+      <section id="services" className="portfolio-section glass-section">
+        <SectionHeader
+          index="05 // Demos"
+          title="Realm Directory"
+          subtitle="Each console channels a live FastAPI service — jack in and exercise the API."
+        />
         <div className="service-list">
           {services.map((service) => (
             <Link
