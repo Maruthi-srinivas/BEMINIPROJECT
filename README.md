@@ -38,3 +38,6 @@ docker compose up --build
 
 Each service publishes OpenAPI documentation at `/docs`. Shared conventions are
 documented in [`shared/README.md`](shared/README.md).
+
+Workflow architecture diagrams for the system and every service:
+[`docs/WORKFLOW-ARCHITECTURE.md`](docs/WORKFLOW-ARCHITECTURE.md).
