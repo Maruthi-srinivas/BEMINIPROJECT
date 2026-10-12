@@ -1,0 +1,28 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8003:8000"
+    environment:
+      DATABASE_URL: jdbc:postgresql://postgres:5432/ratelimiter
+      DATABASE_USER: ratelimiter
+      DATABASE_PASSWORD: ratelimiter
+      REDIS_URL: redis://redis:6379/0
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ratelimiter
+      POSTGRES_USER: ratelimiter
+      POSTGRES_PASSWORD: ratelimiter
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ratelimiter -d ratelimiter"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+  redis:
+    image: redis:7-alpine

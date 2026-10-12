@@ -2,7 +2,7 @@
 
 BE Mini Lab is **ten independently deployable FastAPI services** plus a Vite/React console. Services do **not** call each other. Each owns its config, datastore, and Docker Compose stack. Host ports are `8000 + service number` (`8001`–`8010`). Every API exposes `/health` and OpenAPI at `/docs`.
 
-Shared conventions live in [`shared/`](../shared/README.md). A Spring Boot rewrite of the URL shortener lives in [`java/url-shortener/`](../java/url-shortener/) and is API-compatible with service 01 (same port `8001`; only one stack can bind it).
+Shared conventions live in [`shared/`](../shared/README.md). Spring Boot rewrites live in [`java/url-shortener/`](../java/url-shortener/) (service 01, port `8001`) and [`java/rate-limiter/`](../java/rate-limiter/) (service 03, port `8003`). Each is API-compatible with its Python service; only one stack can bind that port.
 
 ---
 
@@ -428,6 +428,10 @@ flowchart TD
 
 [`java/url-shortener`](../java/url-shortener/) is a Spring Boot port of service 01: same REST contract, PostgreSQL + Redis, OpenAPI at `/docs`, port `8001`. Workflow matches [01 — URL Shortener](#01--url-shortener). Run either the Python or Java compose stack, not both.
 
+## Java Rate Limiter (optional twin)
+
+[`java/rate-limiter`](../java/rate-limiter/) is a Spring Boot port of service 03: same REST contract, PostgreSQL policies, Redis Lua token-bucket and sliding-window checks, OpenAPI at `/docs`, port `8003`. The frontend rate-limiter page already calls that port. Run either the Python or Java compose stack, not both.
+
 ---
 
 ## CI
@@ -437,9 +441,10 @@ flowchart LR
   Push["push / PR on service paths"] --> Matrix["GitHub Actions matrix<br/>01 … 10"]
   Matrix --> Py["Python 3.12"]
   Py --> Test["pytest -q per service"]
+  Push --> Java["mvn test java/rate-limiter"]
 ```
 
-Workflow: [`.github/workflows/test-services.yml`](../.github/workflows/test-services.yml).
+Workflow: [`.github/workflows/test-services.yml`](../.github/workflows/test-services.yml). Python services run in the matrix; `java/rate-limiter` runs `mvn test` on Java 21.
 
 ---
 

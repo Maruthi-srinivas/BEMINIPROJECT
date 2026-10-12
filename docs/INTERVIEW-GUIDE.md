@@ -319,7 +319,7 @@ For every service: purpose, internals, data model, request flow, real-world anal
 
 **Frontend:** Vite dev server, polls `/health`, one console per service. Not a unified product UI.
 
-**Java twin:** `java/url-shortener` is API-compatible Spring Boot (JPA + Redis). Talking point: same contract, two runtimes.
+**Java twins:** `java/url-shortener` and `java/rate-limiter` are API-compatible Spring Boot services (JPA + Redis). Talking point: same contract, two runtimes.
 
 ---
 

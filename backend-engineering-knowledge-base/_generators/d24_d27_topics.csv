@@ -1,0 +1,101 @@
+id,name,domain,folder,note_path,importance,complexity
+D24-T001,Kubernetes architecture,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t001-kubernetes-architecture.md,common,advanced
+D24-T002,Pods and Deployments,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t002-pods-and-deployments.md,common,advanced
+D24-T003,ReplicaSets,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t003-replicasets.md,common,advanced
+D24-T004,Services and service discovery,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t004-services-and-service-discovery.md,common,advanced
+D24-T005,Ingress and Gateway API,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t005-ingress-and-gateway-api.md,common,advanced
+D24-T006,ConfigMaps and Secrets,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t006-configmaps-and-secrets.md,common,advanced
+D24-T007,Namespaces,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t007-namespaces.md,common,advanced
+D24-T008,Liveness readiness and startup probes,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t008-liveness-readiness-and-startup-probes.md,common,advanced
+D24-T009,Resource requests and limits,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t009-resource-requests-and-limits.md,common,advanced
+D24-T010,Horizontal Pod Autoscaler,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t010-horizontal-pod-autoscaler.md,common,advanced
+D24-T011,Persistent Volumes and Claims,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t011-persistent-volumes-and-claims.md,common,advanced
+D24-T012,StatefulSets and DaemonSets,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t012-statefulsets-and-daemonsets.md,common,advanced
+D24-T013,Jobs and CronJobs,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t013-jobs-and-cronjobs.md,common,advanced
+D24-T014,Rolling updates and rollbacks,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t014-rolling-updates-and-rollbacks.md,common,advanced
+D24-T015,Pod disruption budgets,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t015-pod-disruption-budgets.md,common,advanced
+D24-T016,RBAC and service accounts,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t016-rbac-and-service-accounts.md,common,advanced
+D24-T017,Network policies,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t017-network-policies.md,common,advanced
+D24-T018,Helm,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t018-helm.md,common,advanced
+D24-T019,Kubernetes troubleshooting,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t019-kubernetes-troubleshooting.md,common,advanced
+D24-T020,Cloud networking fundamentals,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t020-cloud-networking-fundamentals.md,common,advanced
+D24-T021,VPCs subnets routing and firewalls,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t021-vpcs-subnets-routing-and-firewalls.md,advanced,advanced
+D24-T022,IAM and least privilege,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t022-iam-and-least-privilege.md,common,advanced
+D24-T023,Compute storage and managed databases,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t023-compute-storage-and-managed-databases.md,common,advanced
+D24-T024,Object storage,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t024-object-storage.md,common,advanced
+D24-T025,Load balancers and CDNs,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t025-load-balancers-and-cdns.md,common,advanced
+D24-T026,Autoscaling,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t026-autoscaling.md,common,advanced
+D24-T027,Availability zones and regions,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t027-availability-zones-and-regions.md,common,advanced
+D24-T028,Disaster recovery,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t028-disaster-recovery.md,common,advanced
+D24-T029,RTO and RPO,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t029-rto-and-rpo.md,common,advanced
+D24-T030,Infrastructure as Code: Terraform,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t030-infrastructure-as-code-terraform.md,common,advanced
+D24-T031,Cost monitoring and optimization,Kubernetes and Cloud Infrastructure,23_KUBERNETES_AND_CLOUD,23_KUBERNETES_AND_CLOUD/notes/d24-t031-cost-monitoring-and-optimization.md,common,advanced
+D25-T001,Git fundamentals and branching strategies,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t001-git-fundamentals-and-branching-strategies.md,common,intermediate
+D25-T002,Pull requests and code reviews,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t002-pull-requests-and-code-reviews.md,common,intermediate
+D25-T003,Merge vs rebase,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t003-merge-vs-rebase.md,common,intermediate
+D25-T004,CI pipelines,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t004-ci-pipelines.md,common,intermediate
+D25-T005,Automated testing,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t005-automated-testing.md,common,intermediate
+D25-T006,Build artifacts and versioning,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t006-build-artifacts-and-versioning.md,common,intermediate
+D25-T007,Container image publishing,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t007-container-image-publishing.md,common,intermediate
+D25-T008,CD pipelines,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t008-cd-pipelines.md,common,intermediate
+D25-T009,Jenkins / GitHub Actions / GitLab CI,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t009-jenkins-github-actions-gitlab-ci.md,common,intermediate
+D25-T010,Environment promotion,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t010-environment-promotion.md,common,intermediate
+D25-T011,Deployment strategies,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t011-deployment-strategies.md,common,intermediate
+D25-T012,Rolling deployments,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t012-rolling-deployments.md,common,intermediate
+D25-T013,Blue-green deployments,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t013-blue-green-deployments.md,common,intermediate
+D25-T014,Canary releases,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t014-canary-releases.md,common,intermediate
+D25-T015,Feature flags,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t015-feature-flags.md,common,intermediate
+D25-T016,Database migration safety,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t016-database-migration-safety.md,common,intermediate
+D25-T017,Backward-compatible changes,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t017-backward-compatible-changes.md,common,intermediate
+D25-T018,Rollbacks and roll-forwards,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t018-rollbacks-and-roll-forwards.md,common,intermediate
+D25-T019,Release automation,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t019-release-automation.md,common,intermediate
+D25-T020,GitOps and Argo CD,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t020-gitops-and-argo-cd.md,common,intermediate
+D25-T021,Artifact and dependency security,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t021-artifact-and-dependency-security.md,common,intermediate
+D25-T022,Supply-chain security,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t022-supply-chain-security.md,common,intermediate
+D25-T023,Secrets in CI/CD,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t023-secrets-in-ci-cd.md,common,intermediate
+D25-T024,Release verification,CI/CD and Release Engineering,24_CI_CD,24_CI_CD/notes/d25-t024-release-verification.md,common,intermediate
+D26-T001,Filesystem and permissions,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t001-filesystem-and-permissions.md,core,intermediate
+D26-T002,Users groups and ownership,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t002-users-groups-and-ownership.md,core,intermediate
+D26-T003,Processes: ps top htop,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t003-processes-ps-top-htop.md,core,intermediate
+D26-T004,Signals and process termination,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t004-signals-and-process-termination.md,core,intermediate
+D26-T005,grep sed awk find,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t005-grep-sed-awk-find.md,core,intermediate
+D26-T006,Pipes and redirection,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t006-pipes-and-redirection.md,core,intermediate
+D26-T007,curl and wget,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t007-curl-and-wget.md,core,intermediate
+D26-T008,ss netstat lsof,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t008-ss-netstat-lsof.md,core,intermediate
+D26-T009,dig nslookup ping traceroute,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t009-dig-nslookup-ping-traceroute.md,core,intermediate
+D26-T010,Disk and memory diagnostics,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t010-disk-and-memory-diagnostics.md,core,intermediate
+D26-T011,df du free vmstat,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t011-df-du-free-vmstat.md,core,intermediate
+D26-T012,CPU profiling and system load,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t012-cpu-profiling-and-system-load.md,core,intermediate
+D26-T013,strace basics,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t013-strace-basics.md,core,intermediate
+D26-T014,Environment variables,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t014-environment-variables.md,core,intermediate
+D26-T015,Shell scripting,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t015-shell-scripting.md,core,intermediate
+D26-T016,Log inspection and rotation,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t016-log-inspection-and-rotation.md,core,intermediate
+D26-T017,File descriptor limits,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t017-file-descriptor-limits.md,core,intermediate
+D26-T018,Port conflicts,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t018-port-conflicts.md,core,intermediate
+D26-T019,TLS certificate debugging,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t019-tls-certificate-debugging.md,core,intermediate
+D26-T020,DNS and connectivity debugging,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t020-dns-and-connectivity-debugging.md,core,intermediate
+D26-T021,Out-of-memory failures,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t021-out-of-memory-failures.md,core,intermediate
+D26-T022,Disk exhaustion,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t022-disk-exhaustion.md,core,intermediate
+D26-T023,Process crashes and restarts,Linux and Backend Troubleshooting,25_LINUX_TROUBLESHOOTING,25_LINUX_TROUBLESHOOTING/notes/d26-t023-process-crashes-and-restarts.md,core,intermediate
+D27-T001,SOLID,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t001-solid.md,core,fundamentals
+D27-T002,DRY KISS YAGNI,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t002-dry-kiss-yagni.md,core,fundamentals
+D27-T003,Separation of concerns,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t003-separation-of-concerns.md,core,fundamentals
+D27-T004,High cohesion and low coupling,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t004-high-cohesion-and-low-coupling.md,core,fundamentals
+D27-T005,Dependency inversion,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t005-dependency-inversion.md,core,fundamentals
+D27-T006,Encapsulation and information hiding,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t006-encapsulation-and-information-hiding.md,core,fundamentals
+D27-T007,Clean code and refactoring,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t007-clean-code-and-refactoring.md,core,fundamentals
+D27-T008,Technical debt management,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t008-technical-debt-management.md,core,fundamentals
+D27-T009,Code review practices,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t009-code-review-practices.md,core,fundamentals
+D27-T010,Design documentation,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t010-design-documentation.md,core,fundamentals
+D27-T011,Architecture Decision Records,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t011-architecture-decision-records.md,core,fundamentals
+D27-T012,API and schema compatibility,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t012-api-and-schema-compatibility.md,core,fundamentals
+D27-T013,Backward and forward compatibility,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t013-backward-and-forward-compatibility.md,core,fundamentals
+D27-T014,Semantic versioning,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t014-semantic-versioning.md,core,fundamentals
+D27-T015,Feature flags,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t015-feature-flags.md,core,fundamentals
+D27-T016,Configuration management,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t016-configuration-management.md,core,fundamentals
+D27-T017,Secure coding,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t017-secure-coding.md,core,fundamentals
+D27-T018,Maintainability and extensibility,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t018-maintainability-and-extensibility.md,core,fundamentals
+D27-T019,Debugging methodology,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t019-debugging-methodology.md,core,fundamentals
+D27-T020,Root cause analysis,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t020-root-cause-analysis.md,core,fundamentals
+D27-T021,Engineering trade-offs,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t021-engineering-trade-offs.md,core,fundamentals
+D27-T022,Documentation and knowledge sharing,Software Engineering Principles,26_SOFTWARE_ENGINEERING_PRINCIPLES,26_SOFTWARE_ENGINEERING_PRINCIPLES/notes/d27-t022-documentation-and-knowledge-sharing.md,core,fundamentals
